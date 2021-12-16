@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleJogo.css">
+    <link rel="stylesheet" href="styleJogoCampos.css">
+</head>
+<body>
+    <div class="bolinhaFundo">
+
+    </div>
+    <div class="bolinhaFundo2">
+        
+    </div>
+    <div class="menu">
+        <ul class="lista">
+            <li class="icon play on">
+                <ion-icon name="play"></ion-icon>
+                <span class="text">Play</span>
+            </li>
+
+            <li class="icon nivel" onclick="mostra()">
+                <ion-icon name="grid"></ion-icon>
+                <span class="text">Nivel</span>
+            </li>
+
+            <li class="icon help" onclick="mostra2()">
+                <ion-icon name="help"></ion-icon>
+                <span class="text">Help</span>
+            </li>
+
+            <li class="icon user" onclick="mostra3()">
+                <ion-icon name="person"></ion-icon>
+                <span class="text">User</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="marcador">
+        <ul class="dados">
+            <li class="dd">
+                <ion-icon name="time" id="time"></ion-icon>
+                <span class="tempo">00:00</span>
+            </li>
+
+            <li class="dd trofeu ">
+                <ion-icon name="trophy"></ion-icon>
+                <span class="pontos">0</span>
+            </li>
+
+            <li class="dd stats" onclick="calcula()">
+                <span>Stats</span>
+                <ion-icon name="stats-chart"></ion-icon>
+                <span class="text"></span>
+            </li>
+
+            <li class="dd premios " onclick="exibePremio()">
+                <span>Aces</span>
+                <ion-icon name="ribbon"></ion-icon>
+                <span class="text"></span>
+            </li>
+
+    </div>
+
+    <div class="tela">
+        <div class="circulo">
+            <input type="button" class="red1" >
+            <input type="button"  class="white1" >
+            <input type="button" class="red2" >
+        </div>
+    </div>
+
+    <div class="campos">
+        <div class="campoAviso">
+            <div class="textAviso">
+                <h2> Pra começar o jogo, você precisar ter uma conta cadastrada,
+                    caso não possua uma conta, clique em 'new', mas caso ja tenha, 
+                    clique 'enter'.
+                </h2>
+            </div>
+            <div>
+            <input type="button" class="btn" id= "aviso" value="New" onclick="mostraNew()" >
+            <input type="button" class="btn" id= "aviso" value="Enter" onclick="mostraEnter()" >
+        </div>
+        </div>
+        <div class="inf camp">
+            
+        </div>
+
+        <div class="campeoes camp">
+
+        </div>
+
+        <div class="campoNivel camp">
+            <div class="indicador">
+                <label>Nivel</label>
+            </div>
+            <div class="campo">
+                <li class="spaceNivel">
+                    <span>Time: 25s</span>
+                    <span>Spead: 1s</span>
+                    <input type="button" id="easy" value="Easy" class="inputNivel" onclick="nivel('easy')" style="border: 1.5px solid #fafafa; opacity: 0.85;">
+                </li>
+                <li class="spaceNivel">
+                    <span>Time: 20s</span>
+                    <span>Spead: 0.75s</span>
+                    <input type="button"  id="medium" value="Medium" class="inputNivel" onclick="nivel('medium')">
+                </li>
+                <li class="spaceNivel">
+                    <span>Time: 15s</span>
+                    <span>Spead: 0.5s</span>
+                    <input type="button" id="hard" value="Hard" class="inputNivel"onclick="nivel('hard')">
+                </li>
+            </div>    
+        </div>
+
+        <div class="campoHelp camp">
+            <div class="indicador">
+                <label>Help</label>
+            </div>
+            <li class="spaceHelp">
+                    <h1>Game</h1>
+                    <h2>    É um jogo de dispara, quando clicar 'play', aparecerá  uma alvo,
+                        quanto mais aproximo do meio, mais pontos vale, após terminar tempo
+                        tera icon a direita, mostrando os seus pontos. Caso não escolha nivel,
+                        vai ser automaticamente no 'easy', Quando criar uma conta, não colocar "espaço",
+                        e no nome tem um limite de 8 caracteres e mímino de 3.
+                    </h2>
+                </li>
+        </div>
+        <div class="campoUser camp" page ='inicio' >
+            <div class="fundoCampo"></div>
+            <div class="Login">
+                <label>Login</label>
+                <input type="text" class="userSign input" placeholder="Name" >
+                <input type="password" class="passwordSign input" placeholder="Password">
+                <div>
+                    <input type="button" class="New btn" value="New" onclick="visualizar('create')">
+                    <input type="button" class="Enter btn" value="Enter" onclick="entering()">
+                </div>
+            </div>
+
+            <div class="CreateUser camp">
+                <label>Create User</label>
+                <input type="text" class="nameCreate input" placeholder="Name">
+                <input type="password" class="passwordCreate input" placeholder="Password">
+                <div>
+                    <input type="button" class="Create btn" value="Create" onclick="creating()">
+                    <input type="button" class="Cancel btn" value="Cancel" onclick="visualizar('inicio')">
+                </div>
+            </div>
+
+        </div>
+</div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="jogo.js"></script>
+    <script src="jogoUser.js"></script>
+</body>
+</html>

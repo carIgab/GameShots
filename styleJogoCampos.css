@@ -1,0 +1,98 @@
+.Login{
+    display: none;
+    width: 250px;
+    position: absolute;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 3;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.CreateUser{
+    display: none;
+    display: none;
+    width: 250px;
+    position: absolute;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 3;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.campoUser[page = inicio] .Login{
+    display: flex;
+
+    flex-direction: column;
+}
+.campoUser[page = create] .CreateUser{
+    display: flex;
+    flex-direction: column;
+}
+.campoUser label{
+    color: #fafafa;
+    font-size: 25px;
+    margin:10px;
+}
+.input{
+    color: #fafafa;
+    text-align: center;
+    margin: 10px;
+    font-size: 17.5px;
+    height: 45px;
+    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    width: 175px;
+    outline: 0;
+    transition: 0.5s;
+}
+.input:focus{
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    width: 220px;
+}
+::-webkit-input-placeholder {
+    color: #fafafa;
+    font-size: 17.5px;
+ }
+.btn{
+    padding: 13px 21px;
+    border-radius: 15px;
+    border: 0.3px solid #fafafa;
+    background: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin: 6px;
+    color: #fafafa;
+    transition: 1s;
+    font-size: 17.5px;
+}
+.btn:hover{
+    color: #000;
+    background: #c22ed0;
+    border: none;
+    box-shadow: 0 0 10px #c22ed099,
+                0 0 20px #c22ed099,
+                0 0 40px #c22ed099,
+                0 0 80px #c22ed099;
+}
+.fundoCampo{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    filter: blur(100px);
+    background:  #c22ed0;
+    z-index: 2;
+}
+#aviso:hover{
+    background: #00ff5b;
+    box-shadow: 0 0 10px #00ff5b99,
+                0 0 20px #00ff5b99,
+                0 0 40px #00ff5b99,
+                0 0 80px #00ff5b99;
+}
